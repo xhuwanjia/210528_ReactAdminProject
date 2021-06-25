@@ -6,7 +6,8 @@
 import jsonp from "jsonp";
 import { message } from "antd";
 import ajax from "./ajax";
-const BASE = "";
+// 后台路由前缀（标识后台路由）
+const BASE = "/api";
 
 // 1、登录
 export const reqLogin = (username, password) =>

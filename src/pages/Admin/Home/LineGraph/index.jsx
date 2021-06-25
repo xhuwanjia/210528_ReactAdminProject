@@ -1,5 +1,4 @@
 import React,{Component} from "react";
-import ReactDOM from "react-dom";
 import { Chart, Line, Point, Tooltip, Legend } from "bizcharts";
 
 export default class LineGraph extends Component {
