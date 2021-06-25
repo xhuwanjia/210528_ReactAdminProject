@@ -7,6 +7,7 @@ import LinkButton from "../../../components/LinkButton";
 import { reqCategorys, reqUpdateCategory, reqAddCategory } from "../../../api";
 import AddCategoryForm from "./AddCategoryForm";
 import UpdateCategoryForm from "./UpdateCategoryForm";
+import { PAGE_SIZE } from "../../../utils/constants";
 
 // 品类管理路由
 export default class Category extends Component {
@@ -214,7 +215,7 @@ export default class Category extends Component {
           rowKey="_id"
           loading={loading}
           pagination={{
-            defaultPageSize: 5,
+            defaultPageSize: PAGE_SIZE,
             showQuickJumper: true,
           }}
         />

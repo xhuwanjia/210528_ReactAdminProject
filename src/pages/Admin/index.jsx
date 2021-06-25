@@ -1,18 +1,19 @@
 import React, { Component } from "react";
-import { Route,Switch,Redirect } from "react-router";
+import { Route, Switch, Redirect } from "react-router";
 import { Layout } from "antd";
 
 import memoryUtils from "../../utils/memoryUtils";
 import LeftNav from "../../components/LeftNav";
 import Header from "../../components/Header";
-import Home from './Home'
-import Category from './Category'
-import Product from './Product'
-import User from './User'
-import Role from './Role'
-import Bar from './Bar'
-import Line from './Line'
-import Pie from './Pie'
+import Home from "./Home";
+import Category from "./Category";
+import Product from "./Product";
+import User from "./User";
+import Role from "./Role";
+import Bar from "./Bar";
+import Line from "./Line";
+import Pie from "./Pie";
+import NotFound from "./NotFound";
 
 const { Footer, Sider, Content } = Layout;
 
@@ -32,17 +33,18 @@ export default class Admin extends Component {
         </Sider>
         <Layout>
           <Header>Header</Header>
-          <Content style={{ margin:'20px',backgroundColor: "white" }}>
+          <Content style={{ margin: "20px", backgroundColor: "white" }}>
             <Switch>
-              <Route path="/home" component={Home}/>
-              <Route path="/category" component={Category}/>
-              <Route path="/product" component={Product}/>
-              <Route path="/user" component={User}/>
-              <Route path="/role" component={Role}/>
-              <Route path="/bar" component={Bar}/>
-              <Route path="/line" component={Line}/>
-              <Route path="/pie" component={Pie}/>
-              <Redirect to='/home'/>
+              <Redirect exact from="/" to="/home" />
+              <Route path="/home" component={Home} />
+              <Route path="/category" component={Category} />
+              <Route path="/product" component={Product} />
+              <Route path="/user" component={User} />
+              <Route path="/role" component={Role} />
+              <Route path="/bar" component={Bar} />
+              <Route path="/line" component={Line} />
+              <Route path="/pie" component={Pie} />
+              <Route component={NotFound} />
             </Switch>
           </Content>
           <Footer style={{ textAlign: "center", color: "#cccccc" }}>
